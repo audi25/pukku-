@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffcccb, #ffb6c1);
+            overflow: hidden;
+            font-family: 'Pacifico', cursive;
+            position: relative;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4em;
+            color: #d50000;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            margin-top: 20vh;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #c71585;
+            margin-top: 10px;
+        }
+
+        .loveMessage {
+            display: none; /* Initially hidden */
+            text-align: center;
+            font-size: 5em;
+            color: #ff1493;
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pop 0.5s ease forwards; /* Popping effect */
+        }
+
+        @keyframes pop {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">Happy Anniversary My Love</h1>
+    <h2 id="heading2">From Kichu to Pukku</h2>
+    <div class="loveMessage" id="loveMessage">I Love You!</div>
+    <button class="button" id="celebrateButton" onclick="celebrate()">Press Me</button>
+
+    <script>
+        function celebrate() {
+            // Hide the headings and button
+            document.getElementById('heading1').style.display = 'none';
+            document.getElementById('heading2').style.display = 'none';
+            document.getElementById('celebrateButton').style.display = 'none';
+
+            // Show the love message
+            const loveMessage = document.getElementById('loveMessage');
+            loveMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
